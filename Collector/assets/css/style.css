@@ -1,0 +1,66 @@
+/*
+body {
+	background: url("../images/sushi-bkg.gif");
+	/font-family: "Origami",Avantgarde,"Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+}*/
+
+
+@font-face {
+    font-family: "AtomicSushi";
+    src: url("../fonts/AtomicSushi.ttf");
+    font-family: "Origami";
+    src: url("../fonts/Origami.ttf");
+    font-family: "OsakaSans";
+    src: url("../fonts/osakasans.ttf");
+}
+
+.jumbotron {
+	background: url("../images/sushi-bkg.gif");
+}
+
+
+.img-placeholder img {
+	/*border: 1px red solid;*/
+	width: 200px;
+	height: 200px;
+}
+
+.plate-holder{
+	position: relative;
+}
+
+.plate-holder h2 {
+	position: absolute;
+	top: 40px;
+	left: 150px;
+}
+
+/*.food:hover {
+	color: red;
+}
+*/
+
+.panel {
+	font-family: "Origami";
+}
+
+
+.jumbotron h1, .col-md-3, .col-md-4 h2{
+	font-family: "OsakaSans";
+}
+
+/*.col-md-3{
+	border: 1px blue solid;
+}
+
+.col-md-4{
+	border: 1px black solid;
+}
+
+.col-md-9{
+	border: 1px green solid;
+}
+
+*/
+
+

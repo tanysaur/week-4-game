@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home | Sushi Collector</title>
+		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div>
+	<div class="jumbotron text-center">
+		<h1>Let's eat sushi!</h1>
+	</div>
+</div>
+
+<!-- Create a canvas for:
+WIN: You collected all sushi in your plate
+LOSS: Sushi master took all your sushi
+
+Play again? -->
+<div class="container">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel panel-warning">
+				<div class="panel-heading">
+					<h1>$ <span class="targetNumber"> </span></h1>
+				</div>	
+				<div class="panel-body">
+					<p>You only have this much money in your wallet. Build your plate with the food provided so that it equals the money you have. Note: we do not provide any change.</p>
+				</div>
+			</div>
+			<div class="panel panel-success">
+				<div class="panel panel-heading">
+					<h4><span class="glyphicon glyphicon-shopping-cart"></span> Shopping cart</h4>
+				</div>
+				<div class="panel-body">
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th>Quantity</th>
+								<th>Order</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="sushiQ"></td>
+								<td>Sushi</td>
+							</tr>
+							<tr>
+								<td class="makiQ"></td>
+								<td>Maki</td>
+							</tr>
+							<tr>
+								<td class="nigiriQ"></td>
+								<td>Nigir</td>
+							</tr>
+							<tr>
+								<td class="gyozaQ"></td>
+								<td>Gyoza</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- table -->
+				
+			</div>
+		</div>
+	
+		<div class="col-md-9">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="img-placeholder">
+						<img id="sushi" src="assets/images/sushi.gif" alt="sushi" class="food img-rounded img-responsive"/>
+					</div>
+					<h4 class="text-center">Sushi</h4>
+				</div>
+				<div class="col-md-3">
+					<div class="img-placeholder">
+						<img id="maki" src="assets/images/maki.gif" alt="maki" class="food img-rounded img-responsive"/>
+					</div>
+					<h4 class="text-center">Maki</h4>
+				</div>
+				<div class="col-md-3">
+					<div class="img-placeholder">
+						<img id="nigiri" src="assets/images/nigiri.gif" alt="nigiri" class="food img-rounded img-responsive"/>
+					</div>
+					<h4 class="text-center">Nigiri</h4>
+				</div>
+				<div class="col-md-3">
+					<div class="img-placeholder">
+						<img id="gyoza" src="assets/images/gyoza.gif" alt="gyoza" class="food img-rounded img-responsive"/>
+					</div>
+					<h4 class="text-center">Gyoza</h4>
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<h2 class="wins text-center">Number of plates enjoyed: <br></h2>
+				</div>
+				<div class="col-md-4">
+					<div class="plate-holder">
+						<img id="plate" src="assets/images/plate.gif" alt="plate" class="img-rounded img-responsive"/>
+						<h2 id="plateNumber"></h2>
+					</div>
+				
+				</div>
+				<div class="col-md-4">
+					<h2 class="losses text-center">Number of plates wasted: <br></h2>
+				</div>
+				
+			</div>
+		</div>	
+	</div>
+</div>
+
+
+<script type="text/javascript" src="assets/javascript/game.js" ></script>
+
+</body>
+</html>

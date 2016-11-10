@@ -120,7 +120,7 @@ function playAgain(){
 		resetCounters();
 	// if user hits "Cancel", 
 	} else {
-		alert("OK, see you again!");
+		alert("OK, see you again! This window will now close!");
 		window.close();
 		//close window or show good by picture
 	}

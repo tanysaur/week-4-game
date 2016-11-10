@@ -31,14 +31,9 @@ body {
 
 .plate-holder h2 {
 	position: absolute;
-	top: 40px;
-	left: 150px;
+	top: 30px;
+	left: 130px;
 }
-
-/*.food:hover {
-	color: red;
-}
-*/
 
 .panel {
 	font-family: "Origami";
@@ -49,18 +44,35 @@ body {
 	font-family: "OsakaSans";
 }
 
-/*.col-md-3{
-	border: 1px blue solid;
-}
 
-.col-md-4{
-	border: 1px black solid;
+@-webkit-keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
 }
-
-.col-md-9{
-	border: 1px green solid;
+@keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
 }
-
-*/
+.hvr-pop {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+}
+.hvr-pop:hover, .hvr-pop:focus, .hvr-pop:active {
+  -webkit-animation-name: hvr-pop;
+  animation-name: hvr-pop;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
 
 

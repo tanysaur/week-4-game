@@ -4,37 +4,34 @@
 // numberOptions for each food: 1-12
 // counter: init to 0
 
-// prompt user to play --> see canvas on W3
-
 // Functions:
-// Check counter < targetNumber
+// check counter == , < , > targetNumber
 // reset counters
 // play again
 
-// Assign random value to food (numberOptions)
-// User clicks on a food, add value to counter
-// check counter
+// Assign random value for food (numberOptions)
+// User clicks on a food, then adds value to counter
+// check counter conditions in function above
+// if condition is met, prompt user if they want to play again
 
 var counter = 0;
 var wins = 0;
 var losses = 0;
-var numberOptions = [sushiVal, makiVal, nigiriVal, gyozaVal];
 var sushiVal;
 var makiVal;
 var nigiriVal;
 var gyozaVal;
+var numberOptions = [sushiVal, makiVal, nigiriVal, gyozaVal];
 var sushiQ = 0;
 var makiQ = 0;
 var nigiriQ = 0;
 var gyozaQ = 0;
 
 var targetNumber = Math.floor((Math.random() * 120) + 19);
-		$(".targetNumber").text(targetNumber);
+$(".targetNumber").text(targetNumber);
 
 resetCounters();
 
-
-	
 $("#sushi").on("click", function(){
 	counter += numberOptions[0];
 	sushiQ++;
@@ -66,17 +63,19 @@ $("#gyoza").on("click", function(){
 
 //this function resets the counters as well as their corresponding displays on the html
 function resetCounters(){
-
+	//this re-assigns a random value to the four food listed / numberOptions[]
 	for(i = 0; i < numberOptions.length; i++){
 		numberOptions[i] = Math.floor(Math.random()* 12) +1;
 	}
 
+	//this re-assigns a new amount / budget / targetNumber for the user
 	var newTargetNumber = Math.floor((Math.random() * 120) + 19);
 		$(".targetNumber").text(newTargetNumber);
 
 	targetNumber = newTargetNumber;
-	console.log(numberOptions);
-
+	//console.log(numberOptions);
+	
+	//(optional) resets the Cart counter
 	$("#plateNumber").text(counter);
 	sushiQ = 0;
 	$(".sushiQ").html(sushiQ);
@@ -91,10 +90,10 @@ function resetCounters(){
 
 //this function checks if the user has reached the target number or if it has passed it
 function checkCounterStats(){
-	//when user reached your target number
+	//when user reached your target number, increment win, alert user with the win, ask if they want to play again
 	if(counter == targetNumber){
 		wins++;
-		alert("Congratulations, you have filled up your plate!");
+		alert("You have filled up your plate! Enjoy your food!");
 		$(".wins").text("Number of plates enjoyed: " + wins);
 		playAgain();
 	}
@@ -103,11 +102,11 @@ function checkCounterStats(){
 		//console.log("keep adding to your plate");
 		$("#plateNumber").text(counter);
 	} 
-	//when user has gone above the target / budget$
-	else if(counter > targetNumber){ //plate not yet complete
+	//when user has gone above the targetNumber / budget$, increment losses, ask user if they want to play again. 
+	else if(counter > targetNumber){ 
 		losses++;
-		$(".losses").text("Number of plates wasted: " + losses);
-		alert("You went over the budget by this much: $" + (counter - targetNumber));
+		$(".losses").text("Number of plates to be washed: " + losses);
+		alert("You went over the budget! You owe us: $" + (counter - targetNumber) + ".  Now you have to wash the dishes!");
 		playAgain();
 	}
 }
@@ -122,6 +121,7 @@ function playAgain(){
 	// if user hits "Cancel", 
 	} else {
 		alert("OK, see you again!");
+		window.close();
 		//close window or show good by picture
 	}
 }

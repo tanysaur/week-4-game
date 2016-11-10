@@ -1,13 +1,12 @@
-/*
+
 body {
 	background: url("../images/sushi-bkg.gif");
-	/font-family: "Origami",Avantgarde,"Century Gothic",CenturyGothic,AppleGothic,sans-serif;
-}*/
+}
 
 
 @font-face {
-    font-family: "AtomicSushi";
-    src: url("../fonts/AtomicSushi.ttf");
+    /*font-family: "AtomicSushi";
+    src: url("../fonts/AtomicSushi.ttf");*/
     font-family: "Origami";
     src: url("../fonts/Origami.ttf");
     font-family: "OsakaSans";
@@ -15,12 +14,12 @@ body {
 }
 
 .jumbotron {
-	background: url("../images/sushi-bkg.gif");
+	/*background: url("../images/sushi-mat.jpg");*/
+  background-color: black;
 }
 
 
 .img-placeholder img {
-	/*border: 1px red solid;*/
 	width: 200px;
 	height: 200px;
 }
@@ -29,22 +28,24 @@ body {
 	position: relative;
 }
 
+/*dynamic counter value*/
 .plate-holder h2 {
 	position: absolute;
-	top: 30px;
-	left: 130px;
+	top: 40px;
+	left: 140px;
 }
 
 .panel {
-	font-family: "Origami";
+	font-family: "Origami", "Arial";
 }
-
 
 .jumbotron h1, .col-md-3, .col-md-4 h2{
-	font-family: "OsakaSans";
+	font-family: "OsakaSans", "Arial";
+  color: crimson;
 }
 
 
+/*hover properties*/
 @-webkit-keyframes hvr-pop {
   50% {
     -webkit-transform: scale(1.2);

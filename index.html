@@ -2,7 +2,8 @@
 <html>
 <head>
 	<title>Home | Sushi Collector</title>
-		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="icon" href="assets/images/ysa_logo_favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -12,7 +13,7 @@
 
 <div>
 	<div class="jumbotron text-center">
-		<h1>Let's eat sushi!</h1>
+		<h1>Let's have some sushi!</h1>
 	</div>
 </div>
 
@@ -21,7 +22,7 @@ WIN: You collected all sushi in your plate
 LOSS: Sushi master took all your sushi
 
 Play again? -->
-<div class="container">
+<div class="container-fluid">
 	<div class="row">
 		<div class="col-md-3">
 			<div class="panel panel-warning">
@@ -29,7 +30,9 @@ Play again? -->
 					<h1>$ <span class="targetNumber"> </span></h1>
 				</div>	
 				<div class="panel-body">
-					<p>You only have this much money in your wallet. Build your plate with the food provided so that it equals the money you have. Note: we do not provide any change.</p>
+					<p>You only have this much money in your wallet: $<span class="targetNumber"></span>.</p>
+					<p>Build your plate so that you will not go over your budget. Each of the food has a random value assigned to it. Find out the values to build and enjoy your plate.</p>
+					<p>If you go over the amount, you will owe us money and you will have to wash the dishes.</p>
 				</div>
 			</div>
 			<div class="panel panel-success">
@@ -38,6 +41,7 @@ Play again? -->
 				</div>
 				<div class="panel-body">
 					<table class="table table-bordered">
+						<!-- <p>This is your cart that will show you the quantity of food you have ordered</p> -->
 						<thead>
 							<tr>
 								<th>Qty</th>
@@ -69,7 +73,23 @@ Play again? -->
 			</div>
 		</div>
 	
-		<div class="col-md-9">
+		<div class="col-md-9 panel-body">
+			<div class="row">
+				<div class="col-md-4">
+					<h2 class="wins text-center">Number of plates enjoyed: 0<br></h2>
+				</div>
+				<div class="col-md-4">
+					<div class="plate-holder">
+						<img id="plate" src="assets/images/plate.gif" alt="plate" class="img-rounded img-responsive"/>
+						<h2 id="plateNumber"> </h2>
+					</div>
+				
+				</div>
+				<div class="col-md-4">
+					<h2 class="losses text-center">Number of plates to be washed: 0<br></h2>
+				</div>
+				
+			</div>
 			<div class="row">
 				<div class="col-md-3">
 					<div class="img-placeholder">
@@ -97,22 +117,7 @@ Play again? -->
 					
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<h2 class="wins text-center">Number of plates enjoyed: <br></h2>
-				</div>
-				<div class="col-md-4">
-					<div class="plate-holder">
-						<img id="plate" src="assets/images/plate.gif" alt="plate" class="img-rounded img-responsive"/>
-						<h2 id="plateNumber"></h2>
-					</div>
-				
-				</div>
-				<div class="col-md-4">
-					<h2 class="losses text-center">Number of plates wasted: <br></h2>
-				</div>
-				
-			</div>
+
 		</div>	
 	</div>
 </div>

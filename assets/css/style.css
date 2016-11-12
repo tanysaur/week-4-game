@@ -3,7 +3,6 @@ body {
 	background: url("../images/sushi-bkg.gif");
 }
 
-
 @font-face {
     /*font-family: "AtomicSushi";
     src: url("../fonts/AtomicSushi.ttf");*/
@@ -17,7 +16,6 @@ body {
 	/*background: url("../images/sushi-mat.jpg");*/
   background-color: black;
 }
-
 
 .img-placeholder img {
 	width: 200px;
@@ -58,6 +56,7 @@ body {
     transform: scale(1.2);
   }
 }
+
 .hvr-pop {
   display: inline-block;
   vertical-align: middle;
@@ -76,4 +75,11 @@ body {
   animation-iteration-count: 1;
 }
 
+/* References:
+hvr-pop:
+http://ianlunn.github.io/Hover/
+Origami font: 
+http://www.dafont.com/origami.font
+OsakaSans font:
+http://www.dafont.com/osaka-sans-serif.font*/
 
